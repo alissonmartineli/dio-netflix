@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+h2 {
+  font-size: 1.3rem;
+}
+
+body {
+  background-color: rgb(10, 10, 10);
+  color: white;
+}
+
+.container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 20px;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0));
+  width: 100%;
+}
+
+.navbar .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+}
+
+.navbar .logo {
+  height: 60px;
+  margin-right: 50px;
+}
+
+.navbar a {
+  color: white;
+}
+
+.navbar ul.menu {
+  display: flex;
+  list-style: none;
+  flex-grow: 1;
+}
+
+.navbar ul.menu > li {
+  margin-right: 20px;
+}
+
+.navbar ul.menu > li.active > a {
+  font-weight: bold;
+}
+
+.navbar ul.menu > li:not(.active) > a:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.secondary-nav i {
+  font-size: 20px;
+  margin-left: 30px;
+}
+
+.featured {
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) 100%),
+    url('img/house-of-cards.jpg');
+  background-position: center;
+  background-size: cover;
+  color: white;
+  display: flex;
+  align-items: center;
+  z-index: -1;
+}
+
+.featured .featured-logo {
+  height: 60px;
+}
+
+.featured .featured-description {
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 20px 0;
+}
+
+.btn {
+  padding: 10px 20px;
+  font-weight: bold;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn i {
+  margin-right: 8px;
+}
+
+.btn.btn-play {
+  color: black;
+  background-color: white;
+  margin-right: 10px;
+}
+
+.btn-play:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.btn.btn-info {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.btn-info:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.content {
+  margin-top: 85vh;
+}
+
+.owl-carousel {
+  margin: 10px 0;
+}
+
+@media only screen and (max-width: 600px) {
+  .navbar ul.menu {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .secondary-nav {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .featured .featured-description {
+    width: 80%;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .featured .featured-description {
+    width: 50%;
+  }
+}
